@@ -41,236 +41,7 @@ body{
     color: #333333;
 }
 
-/*.header-nav{
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    background-color: #fff159;
-    border: 0;
- 
-}
-*/
 
-/*.container-nav{
-    display: flex;
-    flex-direction: column;
-    width: 1200px;
-   
-
-}*/
-/*.logo-search{
-    display:flex;
-}
-.logo-search .logo{
-    padding: 11px;
-}
-
-
-.navegacion-main{
-    display: flex;
-  
-}
-
-/*.nav-menu-list{
-    display: flex;
-    list-style: none; 
-    
-}
-/*.nav-menu-item{
-    padding: 10px;
-    
-}
-
- /*.navegacion-main .menu-s a{
-    padding:10px
- }
-
- /*.navegacion-main .menu-s{
-    width: 295px;
-    height: 52px;
-    left: 856px;
-    top: 48px;
- }*/
-
- /*.domi-font{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 22px;
-    color: #333333;
-
- }
-
- /*.domicilio{
-    display: flex;
-    align-items: center; 
-    padding-left: 31px;
-    height: 32px
-   
- }
-
- /*.nav-menu{
-    display: flex;
-    align-items: center; 
-    margin-left: 60.35px;
-    height: 32px     
-    
- }
-
- 
- /*.nav-menu-s{
-    display: flex;
-    align-items: center;  
-    width: 100vw;
-    height: 32px;
-    padding-left: 200px;
-    
-   
- }*/
-
- /*.search{
-    height: 39px;
-    width: 520px;
-    left: 1px;    
-    border-radius: 2px;
-    background-color:  #FFFFFF;
-    display: flex;
-    align-items: center;
-    margin-top:8px;
-    margin-left: 52px;
-
- }
-
-.search input{
-        height: 39px;
-        width: 598px;
-        left: 1px;
-        padding: 5px;
-        border: none;
-       
-    }*/
-
-    /*.slider img{
-       box-sizing: border-box;
-       width: 100%;
-    }
-
-    .main{
-        
-    }
-
-    /* seccion de las formas de pago */
-
-   /* .formas-pago{
-        display: flex;
-        justify-content: center;
-        align-items: center;             
-        margin-top: 40px;
-        padding-left: 160px;
-        padding-right: 160px;
-        
-    }*/
-
-   /* .contenedor-item{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #FFFFFF;
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
-        border-radius: 4px;
-        width: 1184px;
-        height: 90px;
-        
-        
-    }
-
-    .contenedor-item .item-pagos{
-        display: flex;
-        justify-content: center;
-        padding-left:20.5px;
-        
-    }*/
-
-    /*.items{
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        width: 304.66px;
-        height: 130px;
-        padding: 20.5px;
-    }*/
-   
-    /*.item-mas{
-        border-left: 1px solid #EEEEEE;
-    }
-
-    .ofertas{
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 50px;
-       
-    }
-
-    .ofertas .card-ofertas{
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        
-       
-        
-    }
-
-    .articulos{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 224px;
-        height: 350px;
-        margin: 8px;
-        background: #FFFFFF;
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
-        border-radius: 4px;
-    }*/
-    
-   /* .container-info{
-        width: 224px;
-        height: 130.38px;       
-        border-top: 1px solid rgba(51, 51, 51, 0.1);
-        padding: 16px;
-    }
-
-    /*.porc{
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 16px; 
-        padding: 10.33px;       
-        color: #00A650;
-
-    }
-
-    .envio{
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 13px;
-        line-height: 16px;
-        padding-top:5px ;
-        color: #00A650;
-    }
-    .envio-icon{
-        display: flex;
-        gap: 5px;
-       align-items: end;
-    }
-
-    .info-oferta{
-        padding: 8px;
-    }*/
 
     .titulo-sec{
         font-family: 'Roboto';
@@ -290,23 +61,9 @@ body{
         color: #3483FA;
     }
 
-    .suscribir{
-        display: flex;
-        justify-content: center;
-        align-items: center;        
-        margin-top: 57px;
-    }
+  
 
-    .sub-container{
-        width: 1180px;
-        height: 340px;
-        left: 166px;
-        top: 980.19px;
-        background: #FFFFFF;
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
-        border-radius: 6px;
-    }
-
+  
     .sub-container-head{
         display: flex;
         justify-content: space-between;
@@ -403,60 +160,11 @@ body{
     left: 0px;
     top: 87px;
    }
-   .contenedor-boton-azul{
-    display: flex;
-    justify-content: end;
-    align-items: center;  
-    width: 1180px;
-    height: 88px; 
-    border-top: 1px solid #EDEDED;  
-    padding-right:30px ;
-    
-   }
-   .btn-sub{
-    width: 123.72px;
-     background: #3483FA;
-     width: 123.72px;
-     height: 48px;
-     border: none;
-     border-radius: 6px;
-     color: white;
-   
-   }
-
-   .beneficios{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-   }
-
-   .contenedor-beneficios{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: 23px;
-    width: 1180px;
-    height: 399.19px;
-    
-    
-   }
-
-   .titulo-mercado{
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    padding-left: 2px;
-    padding-top: 40px;
-    
-   }
 
    .forma-beneficio{
     display: flex;
     justify-content:start;
-    align-items: end;  
-
+    align-items: end;
     height: 250px;
     width: 384px;
     border-radius:5px; 
@@ -479,12 +187,6 @@ body{
     
   }
 
-  .cards-bene{
-    display: flex; 
-    justify-content: center;   
-    align-items: center;
-    gap: 16px;
-  }
 
   .items-log{
     display: flex;
@@ -511,143 +213,10 @@ body{
 
     }
 
-  .info-bene{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap:4.97px;
-    padding-left: 16px;
-  }
+  
 
-  .titulo-ben{    
-    color: #FFFFFF;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 24px;
 
-  }
-
-  .subtitulo-ben{
-    color: #FFFFFF;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 20px;
-  }
-
-  .dias-ben{
-    color: #FFFFFF;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 16px;
-  }
-
-  /* Seccion descubre */
-
-    .descubre{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      
-    }
-    .titulo-descubre{
-    padding-bottom:19.19px ;
-    padding-left: 8px;
-    }
-
-    .contenedor-descubre{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding:56.12px;
-    }  
-
-    .contenedores-card-des{
-        display: flex;
-        justify-content: center;        
-        gap: 16px;
-        height: 265px;
-        width: 1200px;        
-    }
-
-    .contenedores-card-des .card-descubre{
-        display: flex;
-        align-items: center;
-        background: #FFFFFF;
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
-        border-radius: 4px;
-        height: 250px;
-        width: 584px;       
-        border-radius: 4px;
-        gap: 32.16px;
-              
-        
-
-    }
-
-    .card-descubre .info-caja{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: 11px;
-        padding-left: 32px;        
-      
-    }
-    .card-descubre .info-caja .info{
-        display: flex;      
-        flex-direction: column;       
-
-    }
-
-    .img-hogar{
-        height: 250px;
-        width: 289.84375px;
-        left: 319.5px;
-        top: 0px;
-        border-radius: 0px;
-    }
-
-    .info-caja{
-        width: 287.34px;
-        height: 198.59px;
-    }
-
-    .btn-descubre{
-        width: 96px;
-        height: 36px;
-        left: 32px;
-        top: 130.59px;
-        background: #3483FA;
-        border-radius: 2px;
-        border: none;
-        color: white;
-    }
-
-    .sub , .info-super .text{
-        font-family: Roboto;
-        font-size: 12px;
-        font-weight: 600;
-        line-height: 12px;
-        letter-spacing: 4px;
-        color: #4B4B4B;
-        text-transform: uppercase;
-
-    }
-
-    .info ,.info-super .text-main{
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight:600;
-        font-size: 22px;
-        line-height: 31px;
-        color: #4B4B4B;
-        
-    }
+ 
 
     .card-tienda{
        display: flex;
@@ -794,11 +363,7 @@ body{
     gap:16px;
    }
 
-   .container-super .titulo{
-    display: flex;
-    flex-direction: row;  
-    padding-bottom: 24px; 
-   }
+ 
    .info-super{
     display: flex;
     flex-direction: column;
@@ -815,29 +380,8 @@ body{
     border-radius: 4px;
 
    }
-   .img-super{
-    width: 383px;
-    height: 285px;
-   }
-   .title-col{
-    font-family: Roboto;
-    font-size: 26px;
-    font-weight: 300;
-    line-height: 26px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #666666;
-
-   }
-   .title-sup{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 26px;
-    line-height: 26px;
-    color: #666666;
-
-   }   
+  
+ 
 
    .items-categoria{
     display: grid;
@@ -851,20 +395,7 @@ body{
     
    }
 
-   .contenido-categoria{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 170px;  
-    background: #FFFFFF;
-    border-width: 0px 1px 1px 0px;
-    border-style: solid;
-    border-color: #EAE6E6;
-    text-align: center;
-    gap: 22px;
 
-   }  
    .categorias-populares{
     display: flex;  
     flex-direction: column;
@@ -964,28 +495,4 @@ body{
 
    }
 
-   
-
-
-   
-
   
-   
-  
-
-   
-   
-   
-
-   
-  
-
-
-
-
-
-
-   
-    
-
-

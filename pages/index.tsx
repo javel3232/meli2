@@ -2,62 +2,22 @@
 import { FormasPago } from '@/components/FormasPago'
 import { Ofertas } from '@/components/Ofertas'
 import { Layout } from '@/layouts/Layout'
-import { Head } from 'next/document'
+import { ofertaInfo } from '@/utils/dataOfertaInfo'
+import { formasPagoInfo } from '@/utils/dataFormasPago'
 import React from 'react'
+import { suscribir } from '@/utils/dataSuscribir'
+import { Suscribir } from '@/components/Suscribir'
+import { beneficio } from '@/utils/dataBeneficios'
+import { Beneficios } from '@/components/Beneficios'
+import { Descubre } from '@/components/Descubre'
 
-const formasPagoInfo = {
-    focus: [
-        {
-            image: '/Assets/icon/card.svg',
-            description: 'Hasta 48 cuotas'
-        },
-        {
-            image: '/Assets/icon/casa.svg',
-            description: 'Transferencia desde tu banco'
-        },
-        {
-            image: '/Assets/icon/billete.svg',
-            description: 'Paga en efectivo'
-        }
+import { Supermercado } from '@/components/Supermercado'
+import { descubreInfo } from '@/utils/dataDescubre'
+import { superMercado } from '@/utils/dataSupermercado'
+import { categoriaPopular } from '@/utils/dataCategoriaPopular'
+import { CategoriaPopular } from '@/components/CategoriaPopular'
 
 
-    ]
-}
-const ofertaInfo = {
-    focus: [
-        {
-            imageof: '/Assets/img/silla.png ',
-            precio: '$ 210.900',
-            porcentaje: '32% OFF',
-            envio: 'Envio gratis'
-        },
-        {
-            imageof: '/Assets/img/microfono.png ',
-            precio: '$ 74.990',
-            porcentaje: '25% OFF',
-            envio: 'Envio gratis'
-        },
-        {
-            imageof: '/Assets/img/afeitadora.png ',
-            precio: '$ 149.900',
-            porcentaje: '25% OFF',
-            envio: 'Envio gratis'
-        },
-        {
-            imageof: '/Assets/img/ropero.png ',
-            precio: '$ 149.900',
-            porcentaje: '32% OFF',
-            envio: 'Envio gratis'
-        },
-        {
-            imageof: '/Assets/img/cortina.png ',
-            precio: '$ 69.990',
-            porcentaje: '32% OFF',
-            envio: 'Envio gratis'
-        }
-
-    ]
-}
 
 const index = () => {
     return (
@@ -81,8 +41,8 @@ const index = () => {
                                             image={formapago.image}
                                             description={formapago.description}
                                         />
-                                    )
-                                })}
+                                    );
+                                })};
 
 
                             </div>
@@ -115,7 +75,7 @@ const index = () => {
                                             porcentaje={oferta.porcentaje}
                                             envio={oferta.envio}
                                         />
-                                    )
+                                    );
                                 })}
 
 
@@ -125,8 +85,8 @@ const index = () => {
 
                     </section>
 
-                    <section className="suscribir">
-                        <div className="sub-container">
+                    <section className="flex justify-center items-center mt-[57px]">
+                        <div className="w-[1180px] h-[340px]  bg-white shadow-md rounded-md">
                             <div className="sub-container-head">
                                 <div className="titulo-sub">
                                     <span className="titulo-head">Suscríbete al nivel 6</span>
@@ -149,30 +109,26 @@ const index = () => {
                                     </div>
 
                                     <div className="plataformas">
-                                        <div className="plataformas-sub">
-                                            <img src="/Assets/icon/Disney.svg" alt="" />
-                                            <span>Disney+ sin cargo</span>
-                                        </div>
-                                        <div className="plataformas-sub">
-                                            <img src="/Assets/icon/start.svg" alt="" />
-                                            <span>Star+ sin cargo</span>
-                                        </div>
-                                        <div className="plataformas-sub">
-                                            <img src="/Assets/icon/camion.svg" alt="" />
-                                            <span className="texto-informativo">
-                                                Envíos gratis y rápidos desde $ 90.000 y 40% OFF
-                                                en envios de menos de $ 90.000
+                                        {suscribir.focus.map((sub, index) => {
+                                            return (
 
-                                            </span>
-                                        </div>
+                                                <Suscribir
+                                                    key={index}
+                                                    imagesub={sub.imagesub}
+                                                    descripcion={sub.descripcion}
+
+                                                />
+
+                                            );
+                                        })}
 
                                     </div>
 
 
                                 </div>
-                                <div className="contenedor-boton-azul">
+                                <div className="flex justify-end items-center w-[1180px] h-[88px] border-t border-gray-300 pr-[30px]">
 
-                                    <input className="btn-sub" type="button" value="Suscribete" />
+                                    <input className="w-[123.72px] bg-blue-500 h-[48px] rounded-[6px] text-white" type="button" value="Suscribete" />
 
                                 </div>
 
@@ -182,121 +138,63 @@ const index = () => {
 
                     </section>
 
-                    <section className="beneficios">
-                        <div className="contenedor-beneficios">
-                            <div className="titulo-mercado">
+                    <section className="flex items-center justify-center">
+                        <div className="flex flex-col justify-center items-start gap-[23px] w-[1180px] h-[399.19px]">
+                            <div className="flex justify-center items-center pl-[2px] pt-[40px]">
                                 <span className="titulo-sec"> Beneficios de Mercado Puntos</span>
                                 <span className="ver-sec">Ver todos los beneficios</span>
 
                             </div>
-                            <div className="cards-bene">
+                            <div className="flex justify-center items-center gap-[16px]">
 
-                                <div className="items-disney forma-beneficio">
+                                {beneficio.focus.map((bene, index) => {
+                                    return (
 
-                                    <div className=" disney-gradient items-log">
-                                        <img src="/Assets/icon/comboplus.svg" alt="" />
+                                        <Beneficios
+                                            key={index}
+                                            imageLog={bene.imageLog}
+                                            aviso={bene.aviso}
+                                            titulo={bene.titulo}
+                                            subtitulo={bene.subtitulo}
+                                            items={bene.items}
+                                            gradient={bene.gradient}
 
-                                        <div className="info-bene">
-                                            <div>
-                                                <span className="titulo-ben">Sin cargo con el nivel 6</span>
-                                            </div>
-                                            <span className="subtitulo-ben">Disney+ y Star+</span>
-                                        </div>
+                                        />
 
-                                    </div>
-
-
-                                </div>
-
-                                <div className="items-hbo forma-beneficio" >
-
-                                    <div className="hbo-gradient items-log">
-                                        <img src="/Assets/icon/hbomax.svg" alt="" />
-                                        <div className="info-bene">
-                                            <div>
-                                                <span className="dias-ben">7 DIAS GRATIS</span>
-                                            </div>
-                                            <div>
-                                                <span className="titulo-ben">Hasta 50% OFF</span>
-                                            </div>
-                                            <span className="subtitulo-ben">HBO Max</span>
-                                        </div>
-
-                                    </div>
+                                    );
+                                })}
 
 
-                                </div>
-
-                                <div className="items-paramaunt forma-beneficio" >
-
-                                    <div className="paramaunt-gradient items-log">
-                                        <img src="/Assets/icon/paramount.svg" alt="" />
-                                        <div className="info-bene">
-                                            <div>
-                                                <span className="dias-ben">7 DIAS GRATIS</span>
-                                            </div>
-                                            <div>
-                                                <span className="titulo-ben">Hasta 50% OFF</span>
-                                            </div>
-                                            <span className="subtitulo-ben">Paramount+</span>
-                                        </div>
-
-                                    </div>
-
-
-                                </div>
 
                             </div>
 
                         </div>
                     </section>
 
-                    <section className="descubre">
-                        <div className="contenedor-descubre">
-                            <div className="titulo-descubre">
+                    <section className="flex justify-center items-center">
+                        <div className="flex flex-col justify-center p-[56.12px]">
+                            <div className="pb-[19.19px] pl-[8px]">
                                 <span className="titulo-sec">Descubre</span>
 
                             </div>
 
-                            <div className="contenedores-card-des">
-                                <div className="card-descubre">
-                                    <div className="info-caja">
+                            <div className="flex justify-center gap-[16px] h-[265px] w-[1200px]">
 
-                                        <div className="sub">
-                                            <span className="text">RENUEVA TUS ESPACIOS</span>
-                                        </div>
-                                        <div className="info">
-                                            <span className="text-main">HOGAR Y MUEBLES </span>
-                                            <span className="text-main">HASTA 50% OFF</span>
-                                        </div>
+                                {descubreInfo.focus.map((desc, index) => {
+                                    return (
 
-                                        <input className="btn-descubre" type="button" value="Ver más" />
-                                    </div>
-                                    <div className="img-hogar">
-                                        <img src="/Assets/img/hogar.png" alt="" />
-                                    </div>
+                                        <Descubre
+                                            key={index}
+                                            imagedes={desc.imagedes}
+                                            titulo={desc.titulo}
+                                            titulo2={desc.titulo2}
+                                            texto={desc.texto}
 
-                                </div>
+                                        />
 
-                                <div className="card-descubre">
-                                    <div className="info-caja">
+                                    );
+                                })}
 
-                                        <div className="sub">
-                                            <span className="text">SUSCRíBETE AL NIVEL 6</span>
-                                        </div>
-
-                                        <div className="info">
-                                            <span className="text-main">POR SOLO </span>
-                                            <span className="text-main">$17.899 CADA MES</span>
-                                        </div>
-
-                                        <input className="btn-descubre" type="button" value="Suscribirme" />
-                                    </div>
-                                    <div className="img-hogar">
-                                        <img src="/Assets/img/Box.png" alt="" />
-                                    </div>
-
-                                </div>
                             </div>
 
 
@@ -446,33 +344,37 @@ const index = () => {
                         </div>
 
                     </section>
+ 
 
-                    <section className="supermercado">
-                        <div className="container-super">
-                            <div className="titulo">
-                                <h2 className="title-col">Colecciones:</h2>
-                                <h2 className="title-sup">Supermercado</h2>
+                    <section className="flex justify-center items-center bg-gray-200 mt-[36px]">
+                        <div className="pt-[36px]">
+                            <div className="flex flex-row pb-[24px]">
+                                <h2 className="font-roboto text-[26px] font-light leading-[26px] tracking-normal text-left text-gray-600">Colecciones:</h2>
+                                <h2 className="font-roboto font-semibold text-[26px] leading-[26px] text-gray-600">Supermercado</h2>
                                 <img src="/Assets/icon/Vector.svg" alt="" />
                             </div>
-                            <div className="container-item-super">
+                            <div className="flex gap-[16px]">
                                 <div className="des-super">
-                                    <div className="img-super">
+                                    <div className="w-[383px] h-[285px]">
                                         <img src="/Assets/img/supermercado.png" alt="" />
                                     </div>
                                     <div className="info-super">
-                                        <span className="text">DESCUBRE</span>
-                                        <span className="text-main">SUPERMERCADO</span>
+                                        <span className="font-roboto text-[12px] font-semibold leading-[12px] tracking-wider text-gray-700 uppercase">DESCUBRE</span>
+                                        <span className="font-roboto font-semibold text-[22px] leading-[31px] text-gray-700">SUPERMERCADO</span>
                                     </div>
                                 </div>
                                 <div className="items-products">
-                                    <div className="items-all"><img src="/Assets/img/eucerin.png" alt="" /></div>
-                                    <div className="items-all"><img src="/Assets/img/cicatricure.png" alt="" /></div>
-                                    <div className="items-all"><img src="/Assets/img/celula.png" alt="" /></div>
-                                    <div className="items-all"><img src="/Assets/img/pomada.png" alt="" /></div>
-                                    <div className="items-all"><img src="/Assets/img/fideo.png" alt="" /></div>
-                                    <div className="items-all"><img src="/Assets/img/lalico.png" alt="" /></div>
-                                    <div className="items-all"><img src="/Assets/img/pomadaEucerin.png" alt="" /></div>
-                                    <div className="items-all"><img src="/Assets/img/tionacho.png" alt="" /></div>
+                                    {superMercado.focus.map((superM, index) => {
+                                        return (
+
+                                            <Supermercado
+                                                key={index}
+                                                imageSuper={superM.imageSuper}
+
+                                            />
+
+                                        );
+                                    })}
 
                                 </div>
                             </div>
@@ -488,92 +390,18 @@ const index = () => {
                             </div>
                             <div className="items-categoria">
 
-                                <div className="contenido-categoria">
-                                    <img src="/Assets/icon/carro.svg" alt="" />
-                                    <div className="text-categoria">
-                                        <span>Carro,Motos y Otros</span>
-                                    </div>
-                                </div>
+                            {categoriaPopular.focus.map((cate, index) => {
+                                        return (
 
+                                            <CategoriaPopular
+                                                key={index}
+                                                icon={cate.icon}
+                                                text={cate.text}                                                
 
-                                <div className="contenido-categoria">
-                                    <img src="/Assets/icon/computador.svg" alt="" />
-                                    <div className="text-categoria">
-                                        <span>Computación</span>
-                                    </div>
-                                </div>
-                                <div className="contenido-categoria">
-                                    <img src="/Assets/icon/camisa.svg" alt="" />
-                                    <div className="text-categoria">
-                                        <span>Ropa y Accesorios</span>
-                                    </div>
-                                </div>
-                                <div className="contenido-categoria">
-                                    <img src="/Assets/icon/sofa.svg" alt="" />
-                                    <div className="text-categoria">
-                                        <span>Hogar y Muebles</span>
-                                    </div>
-                                </div>
-                                <div className="contenido-categoria">
-                                    <img src="/Assets/icon/volante.svg" alt="" />
-                                    <div className="text-categoria">
-                                        <span>Accesorios para Vehiculos</span>
-                                    </div>
-                                </div>
-                                <div className="contenido-categoria">
-                                    <img src="/Assets/icon/estufa.svg" alt="" />
-                                    <div className="text-categoria">
-                                        <span>Electrodomésticos</span>
-                                    </div>
-                                </div>
-                                <div className="contenido-categoria">
-                                    <img src="/Assets/icon/camara.svg" alt="" />
-                                    <div className="text-categoria">
-                                        <span>Cámaras y Accesorios</span>
-                                    </div>
-                                </div>
-                                <div className="contenido-categoria">
-                                    <img src="/Assets/icon/celular.svg" alt="" />
-                                    <div className="text-categoria">
-                                        <span>Celulares y Teléfonos</span>
-                                    </div>
-                                </div>
-                                <div className="contenido-categoria">
-                                    <img src="/Assets/icon/labial.svg" alt="" />
-                                    <div className="text-categoria">
-                                        <span>Belleza y Cuidado Personal</span>
-                                    </div>
-                                </div>
-                                <div className="contenido-categoria">
-                                    <img src="/Assets/icon/balon.svg" alt="" />
-                                    <div className="text-categoria">
-                                        <span>Deportes y Fitness</span>
-                                    </div>
-                                </div>
-                                <div className="contenido-categoria">
-                                    <img src="/Assets/icon/microfono.svg" alt="" />
-                                    <div className="text-categoria">
-                                        <span>Electrónica,Audio y Video</span>
-                                    </div>
-                                </div>
-                                <div className="contenido-categoria">
-                                    <img src="/Assets/icon/control.svg" alt="" />
-                                    <div className="text-categoria">
-                                        <span>Consola y Videojuegos</span>
-                                    </div>
-                                </div>
-                                <div className="contenido-categoria">
-                                    <img src="/Assets/icon/oso.svg" alt="" />
-                                    <div className="text-categoria">
-                                        <span>Juegos y Juguetes</span>
-                                    </div>
-                                </div>
-                                <div className="contenido-categoria">
-                                    <img src="/Assets/icon/herramienta.svg" alt="" />
-                                    <div className="text-categoria">
-                                        <span>Herramientas</span>
-                                    </div>
-                                </div>
+                                            />
+
+                                        );
+                                    })}
 
 
                             </div>

@@ -12,7 +12,7 @@ const FormasPago = ({image , description}:FormasPagoProps) => {
             <img src={image} alt="" />
             <span>{description}</span>
         </div>
-    )
-}
+    );
+};
 
-export { FormasPago } 
+export { FormasPago };

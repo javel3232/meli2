@@ -27,7 +27,7 @@ const Ofertas = ({ imageof, precio, porcentaje, envio }: OfertasProps) => {
 
 
         </div>
-    )
-}
+    );
+};
 
-export { Ofertas }
+export { Ofertas };
